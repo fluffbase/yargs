@@ -42,9 +42,3 @@ func (tok Tokens) ToCamelCase() string {
 	}
 	return strings.Join(strs, "")
 }
-
-func test() bool {
-return FromSnakeCase("snake-case-item").ToCamelCase() == "SnakeCaseItem" &&
-	FromCamelCase("CamelCaseItem").ToSnakeCase() == "camel-case-item" &&
-	FromCamelCase("Camel").ToSnakeCase() == "camel"
-}
