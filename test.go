@@ -15,7 +15,7 @@ type TypeA struct {
 	Item Type1
 }
 	
-func test() {
+func test() bool {
 	a := TypeA{A:"Aaaa", B:"Bbbb", C:true, D:12, F:37.2, Item:Type1{One:"Won", Two:"Too"}}
 	Unmarshal([]string{"--A=Qqqq", "--C=false", "--D=21", "--F=24.2", "--Item.One=Tree"}, &a)
 	fmt.Printf("%v", a)
